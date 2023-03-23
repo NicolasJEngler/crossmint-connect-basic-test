@@ -17,7 +17,7 @@ export default function Home() {
   async function connectToCrossmint() {
     // Initialize the Crossmint connect.
     const _crossmintConnect = new CrossmintEVMWalletAdapter({
-      apiKey: process.env.NEXT_PUBLIC_CROSSMINT_API_KEY,
+      apiKey: process.env.NEXT_PUBLIC_CROSSMINT_API_KEY || 'yourApiKeyHere',
       chain: BlockchainTypes.ETHEREUM, // BlockchainTypes.ETHEREUM || BlockchainTypes.POLYGON. For solana use BlockchainTypes.SOLANA
     });
 
